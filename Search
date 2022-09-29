@@ -1,13 +1,14 @@
-  public class Search {
-    protected int banding;
+public class Search {
+
     protected int hitung;
     
     public int sequentialSearch(int[] data, int kunci){
-        banding = 0;
-        for(int counter = 0;counter<data.length;counter++){
-            hitung = data[counter];
-            if(data[counter]==kunci)
-                return counter;
+
+    for(int counter = 0;counter<data.length;counter++){
+        banding++;
+        hitung = data[counter];
+        if(data[counter]==kunci)
+            return counter;
         }
         return -1;
     }
@@ -26,3 +27,4 @@
         }
         return -1;
     }
+}
