@@ -1,0 +1,28 @@
+  public class Search {
+    protected int banding;
+    protected int hitung;
+    
+    public int sequentialSearch(int[] data, int kunci){
+        banding = 0;
+        for(int counter = 0;counter<data.length;counter++){
+            hitung = data[counter];
+            if(data[counter]==kunci)
+                return counter;
+        }
+        return -1;
+    }
+    
+    public int binarySearch(int[] data, int kunci){
+        int indeksAkhir = data.length-1;
+        banding = 0;
+        for(int indeksAwal = 0; indeksAwal <= indeksAkhir;){
+            int indeksTengah = (indeksAwal+indeksAkhir)/2;
+            if(data[indeksTengah] == kunci)
+                return indeksTengah;
+            else if(data[indeksTengah]>kunci)
+                indeksAkhir = indeksTengah-1;
+            else
+                indeksAwal = indeksTengah+1;
+        }
+        return -1;
+    }
