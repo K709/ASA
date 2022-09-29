@@ -5,7 +5,6 @@ public class Search {
     public int sequentialSearch(int[] data, int kunci){
 
     for(int counter = 0;counter<data.length;counter++){
-        banding++;
         hitung = data[counter];
         if(data[counter]==kunci)
             return counter;
@@ -15,7 +14,6 @@ public class Search {
     
     public int binarySearch(int[] data, int kunci){
         int indeksAkhir = data.length-1;
-        banding = 0;
         for(int indeksAwal = 0; indeksAwal <= indeksAkhir;){
             int indeksTengah = (indeksAwal+indeksAkhir)/2;
             if(data[indeksTengah] == kunci)
